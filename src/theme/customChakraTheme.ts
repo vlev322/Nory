@@ -4,6 +4,13 @@ export const defaultTheme = extendTheme({
   colors: {
     accent: "#A086D4",
   },
+  styles: {
+    global: {
+      body: {
+        backgroundColor: ["#E5E5E5", "#fff"],
+      },
+    },
+  },
 
   fonts: {
     heading:

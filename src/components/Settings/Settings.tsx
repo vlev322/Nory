@@ -10,8 +10,8 @@ export const Settings = () => {
   }
 
   return (
-    <Box py="80px" px="31px">
-      <Heading mb="24px" fontSize="32px">
+    <Box py="30px" px="31px" rounded="4px" background="#fff" h="100vh" shadow="2xl">
+      <Heading mb="24px" fontSize={["20px", "32px"]}>
         Settings page
       </Heading>
       {data ? <Image src={data.message} h="334px" w="544px" objectFit="cover" /> : <Skeleton h="334px" w="544px" />}
