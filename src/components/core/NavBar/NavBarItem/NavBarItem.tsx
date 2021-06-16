@@ -1,9 +1,10 @@
 import { FC } from "react";
-import { Center, Link, Box } from "@chakra-ui/react";
+import { Center, Box } from "@chakra-ui/react";
 import { useRouteMatch } from "react-router";
 
 type Props = {
   href: string;
+  onClick: () => void;
   imgSrc: string;
   imgActiveSrc: string;
 };
@@ -13,11 +14,17 @@ export const NavBarItem: FC<Props> = (props) => {
   const styles = additionalStyles({ ...props, isExact: Boolean(match?.isExact) });
 
   return (
-    <Link href={props.href} title="Sales">
-      <Center h={["100%", "64px"]} w={["46px", "auto"]} position="relative" _before={styles.before} _hover={styles.hover}>
-        <Box bgImage={match?.isExact ? props.imgActiveSrc : props.imgSrc} bgRepeat="no-repeat" bgSize="contain" h="16px" w="14px" />
-      </Center>
-    </Link>
+    <Center
+      h={["100%", "64px"]}
+      w={["46px", "auto"]}
+      position="relative"
+      _before={styles.before}
+      _hover={styles.hover}
+      onClick={props.onClick}
+      title="navbar item"
+    >
+      <Box bgImage={match?.isExact ? props.imgActiveSrc : props.imgSrc} bgRepeat="no-repeat" bgSize="contain" h="16px" w="14px" />
+    </Center>
   );
 };
 
