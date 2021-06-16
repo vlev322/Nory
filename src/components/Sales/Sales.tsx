@@ -1,10 +1,10 @@
 import { Heading, Box, Stack, Image, Skeleton } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../logic/redux/store";
-import { PetImgState } from "../../types/common";
+
+import { getPetImgData } from "../../logic/redux/modules/dogImgsContent/selectors";
 
 export const Sales = () => {
-  const { image, error, pending } = useSelector<RootState, PetImgState>((state) => state.petImage);
+  const { image, error, pending } = useSelector(getPetImgData);
 
   if (error) {
     return <Heading>Something went wrong..</Heading>;
@@ -18,12 +18,12 @@ export const Sales = () => {
             <Skeleton height="20px" />
             <Skeleton height="20px" />
           </Stack>
-          <Skeleton h="334px" w="544px" />
+          <Skeleton h={["187px", "334px"]} w={["304px", "544px"]} />
         </>
       )}
       {image && (
         <>
-          <Heading role="heading" mb="24px" fontSize={["20px", "32px"]} lineHeight={["24px", "32px"]}>
+          <Heading role="heading" mb={["10px", "24px"]} fontSize={["20px", "32px"]} lineHeight={["24px", "32px"]}>
             Labour page
           </Heading>
           <Image role="img" src={image} h={["187px", "334px"]} w={["304px", "544px"]} objectFit="cover" />

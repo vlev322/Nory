@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 import { History } from "history";
 import { RouterState, connectRouter } from "connected-react-router";
+
 import { petImgReducer } from "./modules/dogImgsContent/reducer";
 import { PetImgState } from "../../types/common";
 

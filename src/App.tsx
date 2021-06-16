@@ -1,5 +1,6 @@
 import { ConnectedRouter } from "connected-react-router";
 import { History } from "history";
+
 import routes from "./routes/routes";
 
 interface AppProps {

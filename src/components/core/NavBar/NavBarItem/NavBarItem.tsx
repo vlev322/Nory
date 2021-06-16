@@ -23,7 +23,7 @@ export const NavBarItem: FC<Props> = (props) => {
       onClick={props.onClick}
       title="navbar item"
     >
-      <Box bgImage={match?.isExact ? props.imgActiveSrc : props.imgSrc} bgRepeat="no-repeat" bgSize="contain" h="16px" w="14px" />
+      <Box bgImage={match?.isExact ? props.imgActiveSrc : props.imgSrc} bgRepeat="no-repeat" bgSize="contain" h="16px" w="16px" />
     </Center>
   );
 };

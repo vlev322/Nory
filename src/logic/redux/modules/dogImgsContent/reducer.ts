@@ -9,7 +9,19 @@ const initialState: PetImgState = {
 };
 
 export const petImgReducer = createReducer(initialState, (builder) => {
-  builder.addCase(fetchPetImgPending, (state) => ({ ...state, pending: true, image: "" }));
-  builder.addCase(fetchPetImgSuccess, (state, action) => ({ ...state, image: action.payload.message, pending: false }));
-  builder.addCase(fetchPetImgError, (state, action) => ({ ...state, error: action.payload.response?.data || null, pending: false }));
+  builder
+    .addCase(fetchPetImgPending, (state) => {
+      state.pending = true;
+      state.image = "";
+      state.error = null;
+    })
+    .addCase(fetchPetImgSuccess, (state, action) => {
+      state.image = action.payload.message;
+      state.pending = false;
+      state.error = null;
+    })
+    .addCase(fetchPetImgError, (state, action) => {
+      state.error = action.payload.response?.data || null;
+      state.pending = false;
+    });
 });
