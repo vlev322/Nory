@@ -2,6 +2,15 @@
   "name": "Nory-Navbar",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vlev322.github.io/Nory/",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "@chakra-ui/react": "^1.6.3",
     "@emotion/react": "^11.4.0",
@@ -20,6 +29,7 @@
     "axios": "^0.21.1",
     "connected-react-router": "^6.9.1",
     "framer-motion": "^4.1.17",
+    "gh-pages": "^3.2.2",
     "history": "4.10.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -29,12 +39,6 @@
     "redux-saga": "^1.1.3",
     "redux-saga-test-plan": "^4.0.1",
     "typescript": "~4.1.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
