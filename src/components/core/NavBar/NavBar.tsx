@@ -25,7 +25,7 @@ export const NavBar = () => {
     >
       <Flex w={["32px", "100%"]} mb={[0, "19px"]} flexGrow={[1, 0]} justifyContent={["flex-start", "center"]} onClick={handleGoTo("/")}>
         <Center>
-          <Img alt="Nory Logo" src="https://nory.ai/static/media/n-logo.34190c70.svg" _hover={{ cursor: "pointer" }} h="27px" w="32px" />
+          <Img alt="Nory Logo" src="/images/icons/nory-logo.svg" _hover={{ cursor: "pointer" }} h="27px" w="32px" />
         </Center>
       </Flex>
       <Flex w={["auto", "100%"]} direction={["row", "column"]} flexGrow={[0, 1]}>
